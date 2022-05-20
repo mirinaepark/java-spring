@@ -1,0 +1,27 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'com.mrnstudio.spring'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.6.7'
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.19'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
